@@ -1,0 +1,151 @@
+<div class='h-full w-full bg-gray-100'>
+<div class="flex flex-col pb-8">
+  <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2 mt-6">  <%= flash[:recaptcha_error] %>
+
+<div role="alert">
+  <% @user.errors.each do |attr, msg| %>
+  <div class="border border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700">
+  <li class='ml-4'>
+    <%= @user.errors.full_messages_for(attr).first if @user.errors[attr].first == msg %>
+  </li>
+  </div>
+<% end %>
+</div>
+
+    <div class="bg-teal-100 px-6 py-8 rounded shadow-md text-black w-full">
+      <div class='object-center'><%= image_tag("web/milrevoltslife_250h.png", :alt => "Mil Revolts", class:"ml-6 object-center mb-8") %></div>
+      <h1 class="mb-8 text-2xl text-center text-teal-600 font-bold"><i class='fas fa-edit mr-2'></i>Crea el teu compte</h1>
+                 
+<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html:{id: 'basic_form'})  do |f| %>
+<%#= simple_form_for(resource, as: resource_name, url: new_user_registration_path(:plan=>'0'), html:{id: 'basic_form'})  do |f| %>
+<%#= simple_form_for(user, as: user, url: new_user_registration_path(:plan=>'0'), html:{id: 'basic_form'})  do |f| %>
+<%#= hidden_field_tag :plan, params[:plan] %>
+<%= f.hidden_field :plan_id, :value => '0' %>
+<!--<input type="hidden" name="plan" value="0" />-->
+
+        <div class="field">
+          <%= f.label :Nom, class:'font-bold text-teal-500' %>
+          <div class="">
+          <%= f.text_field :nom, autofocus: true, required: true, placeholder:"Nom", class:"shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker"%>
+          </div>
+        </div>
+        <div class="field">
+          <%= f.label :Primer_cognom, class:'font-bold text-teal-500' %>
+          <div class="">
+          <%= f.text_field :cognom1, autofocus: true, placeholder:"Primer cognom", class:"shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker"%>
+          </div>
+        </div>
+        <div class="field">
+          <%= f.label :Segon_cognom, class:'font-bold text-teal-500' %>
+          <div class="">
+          <%= f.text_field :cognom2, autofocus: true, placeholder:"Segon cognom", class:"shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker"%>
+          </div>
+        <div class="field my-3">
+         <%= f.label :La_teva_foto, class:'font-bold text-teal-500' %>
+         <div class="text-sm italic text-teal-700">
+         <%#= f.file_field :avatar, autofocus: true, placeholder:"El teu Avatar", class:"" %><p>Desprès d'activar-te el compte ja podràs publicar la teva foto 
+         <i class="user icon"></i></p>
+         </div>
+        </div>
+        <div class="field">
+          <%= f.label :moto, class:'font-bold text-teal-500' %>
+          <div class="">
+          <%= f.text_field :moto, autofocus: true, required: true, placeholder:"Marca, model i any", class:"shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker"%>
+          <i class="motorcycle icon"></i>
+          </div>
+        </div>
+        <div class="field my-3">
+          <%= f.label :Foto_de_la_teva_moto, class:'font-bold text-teal-500' %>
+          <div class="text-sm italic text-teal-700">
+          <%#= f.file_field :foto_moto, autofocus: true, placeholder:"La foto de la teva moto", class:""%><p>Desprès d'activar-te el compte ja podràs publicar la foto de la teva moto 
+          <i class="motorcycle icon"></i></p>
+          </div>
+        </div>
+        <div class="field" style='margin-top:20px'>
+          <%= f.label :localitat, class:'font-bold text-teal-500' %>
+          <div class="">
+          <%= f.text_field :localitat, autofocus: true, required: true, placeholder:"A on resideixes ara.", class:"shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker"%>
+          <i class="map marker alternate icon"></i>
+          </div>
+        </div>
+        <div class="field">
+          <%= f.label :data_de_naixement, class:'font-bold text-teal-500' %>
+          <div class="">
+          <%= f.date_select :data_naixement, autofocus: true, required: true, placeholder:"Dia del teu naixement", start_year: DateTime.now.year - 18, end_year: DateTime.now.year - 75, class:"shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" %>
+          </div>
+        </div>
+        <div class="field">
+          <%= f.label :curta_presentació_com_motorista, class:'font-bold text-teal-500' %>
+          <div class="">
+          <%= f.text_area :presentacio, autofocus: true, placeholder:"La teva curta presentació com motorista", class:"shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" %>
+          </div>
+        </div>
+        <div style='margin-top:10px; margin-bottom:10px;'><BR/></div>
+
+<!-- ./comú /privada -->
+
+        <div class="bg-teal-100 p-6 border-2 border-teal-400 rounded-lg" style="margin-top:10px; padding-bottom: 20px;"> 
+        <div style='color:teal; text-align: center;'><b>Àrea privada:</b></div>   
+        <div class="field" style="margin-top:10px;">
+          <%= f.label :mòbil, style: "", class:'font-bold text-teal-500' %>
+          <div class="">
+          <%= f.text_field :mobil, autofocus: true, placeholder:"El número del teu mòbil per unir-te als grups de WhatsApp", class:"shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker" %>
+           <i class="phone square icon"></i>
+          </div>
+        </div>  
+        <div class="field">
+          <%= f.label :email, class:'font-bold text-teal-500' %>
+          <div class="">
+          <%= f.email_field :email, autofocus: true, placeholder:"El teu correu electrònic", class:"shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker"%>
+          <i class="at icon"></i>
+          </div>
+        </div>
+        <div class="field">
+          <%= f.label :password, class:'font-bold text-teal-500' %>
+          <div class="">
+          <%= f.password_field :password, autocomplete: "off" ,placeholder:"Password", class:"shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker"%>
+          <i class="lock icon"></i>
+          </div>
+        </div>
+        <div class="field">
+          <%= f.label :password_confirmation, class:'font-bold text-teal-500' %>
+          <div class="">
+          <%= f.password_field :password_confirmation, autofocus: true,autocomplete: "off", placeholder:"Password confirmation", class:"shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker"%>
+          <i class="lock icon"></i>
+          </div>
+        </div>
+       </div><!-- ./segment -->
+       <BR/>
+
+       <%= recaptcha_tags %>
+
+       <BR/>
+        <div class="text-center">
+          <%= f.submit "ENVIA", id:'submit_basic_form', onclick:'alert("Les dades es van a processant pel registre")' %>
+        </div>
+<% end %>
+
+</div>
+</div>
+</div>
+
+                    <div class="text-center text-sm text-grey-dark mt-4">
+                        Registrant-se al lloc web, s'acepten els nostres 
+                        <a class="no-underline border-b border-grey-dark text-grey-dark" href="termes">
+                            Termes de Servei
+                        </a> i la nostra 
+                        <a class="no-underline border-b border-grey-dark text-grey-dark" href="privacitat">
+                            Política de privacitat.
+                        </a>
+                    </div>
+
+        <div class="text-center text-teal-500 mt-8 font-bold text-sm">Ja tens un compte? 
+        <a class="border-b text-teal-500" href="/users/sign_in">Entra</a>.
+        </div>
+        <%= render "devise/shared/links" %>
+
+
+<script>
+  new NewRegistration();
+</script>
+

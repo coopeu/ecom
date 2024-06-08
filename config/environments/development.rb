@@ -73,4 +73,68 @@ Rails.application.configure do
 
   # Raise error when a before_action's only/except options reference missing actions
   config.action_controller.raise_on_missing_callback_actions = true
+
+  config.hosts << "ecom.coopeu.com"
+
+
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_caching = true
+  config.action_mailer.default_options = {from: '<coopeu@coopeu.com>'}
+#  config.action_mailer.default_url_options = { host: 'smtp.coopeu.com' }
+#  config.action_mailer.perform_deliveries = true
+#  config.action_mailer.delivery_method = :smtp
+  #config.action_mailer.delivery_method = :sendmail
+  #config.action_mailer.default_url_options = { host: 'coopeu.com' }
+#  config.action_mailer.smtp_settings = {
+#    user_name:      ENV['SENDMAIL_USERNAME'],
+#    password:       ENV['SENDMAIL_PASSWORD'],
+#    domain:         ENV['MAIL_HOST'],
+#    address:       'smtp.gmail.com',
+#    port:          '587',
+#    authentication: :plain,
+#    enable_starttls_auto: true
+#config.action_mailer.smtp_settings = {
+#  address:              'imap.dreamhost.com',
+#  port:                 993,
+#  domain:               'coopeu.com',
+#  user_name:            'coopeu@coopeu.com',
+#  password:             'JaumeFabra1212>',
+#  authentication:       'plain',
+#  enable_starttls_auto: true
+#}
+#config.action_mailer.delivery_method = :smtp
+#  config.action_mailer.smtp_settings = {
+#    address: 'smtp.coopeu.com',
+#    port: 587,
+#    domain: 'coopeu.com',
+#    user_name: 'fcv',
+#    password: 'Consenorg3005',
+#    authentication: 'plain',
+#    enable_starttls_auto: true
+#  }
+#config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }  
+# Adjust for your environment
+
+# Devise
+config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+config.action_mailer.raise_delivery_errors = true
+config.action_mailer.delivery_method = :smtp
+config.action_mailer.perform_deliveries = true
+config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+config.action_mailer.smtp_settings = {
+:address => "dev.coopeu.com",
+:port => 587,
+:domain => "dev.cooopeu.com",
+:user_name => "coopeu@coopeu.com",
+:password => "Consenorg.3005",
+:authentication => :plain,
+:enable_starttls_auto => true
+}
+
+
+
+  config.active_storage.service = :local
+#  config.i18n.available_locales = :ca
+  
 end

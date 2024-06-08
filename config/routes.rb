@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :sorts  
+  devise_for :users
   #get 'static_pages/home'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -10,5 +12,6 @@ Rails.application.routes.draw do
   # root "posts#index"
   #root "pages#home"
   #get 'static_pages/home'
-  root "static_pages#home"
+  #root "static_pages#home"
+  root "sorts#index"
 end
