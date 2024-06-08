@@ -2,7 +2,7 @@
   <% if notice.present? %>
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
-
+<%#= current_user.slug if current_user %>
   <% content_for :title, "Sorts" %>
 
   <div class="flex justify-between items-center">
@@ -14,7 +14,7 @@
     <% @sorts.each do |sort| %>
       <%= render sort %>
       <p>
-        <%= link_to "Show this sort", sort, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+        <%= link_to "Vuere aquesta sortida", sort, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
       </p>
     <% end %>
   </div>
