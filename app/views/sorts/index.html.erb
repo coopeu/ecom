@@ -7,14 +7,14 @@
 
   <div class="flex justify-between items-center">
     <h1 class="font-bold text-4xl color-teal">Sortides</h1>
-    <%= link_to "Nova sortida", new_sort_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+    <%= link_to "Nova sortida", new_sort_path, class:"text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-teal-300 dark:focus:ring-teal-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2", style:'background-color: teal; border: none;  color: white; padding: 4px 6px; text-align: center; text-decoration: none; display: inline-block; font-size: 12px;' %>
   </div>
 
   <div id="sorts" class="min-w-full color-teal">
     <% @sorts.each do |sort| %>
       <%= render sort %>
       <p>
-        <%= link_to "Vuere aquesta sortida", sort, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+        <%= link_to "Veure aquesta sortida", sort, class:"text-gray-300 ml-2 rounded-lg py-3 px-5 bg-gray-200 inline-block font-medium" %>
       </p>
     <% end %>
   </div>

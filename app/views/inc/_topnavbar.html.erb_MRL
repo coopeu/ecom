@@ -1,0 +1,135 @@
+<header class='w-full bg-teal-200 border-b-1 border-white'>
+
+<style type="text/css">
+  .group:hover .group-hover\:block {
+  display: block !important;
+}</style>
+
+<div class="w-full inline-flex border-b-2" id="main_menu">
+            <ul class="flex flex-wrap p-1 md:p-2 text-sm md:text-base" id="menu_nav">
+                <li class="relative mr-8 mx-1 px-1 py-2 group rounded-full mb-1 md:mb-0" id="button_home">
+                <span class=""><%= link_to root_path do %><p class="text-gray-600 text-xl font-extrabold">Grup motorista<span class='text-green2logo'> 'Mil</span><span class='text-redlogo'> Revolts'</span><span class='ml-3 text-xs text-teal-500 italic'><% end %></span>
+                </li>
+                <li class="relative mx-1 px-1 py-2 group mb-1 md:mb-0" id="button_admin">
+                    <a class="font-semibold whitespace-no-wrap text-teal-600 hover:text-teal-800" href="/users">
+                        <span class="">Motoristes</span>
+                    </a>
+                </li>
+								<li class="relative mx-1 px-1 py-2 group mb-1 md:mb-0" id="button_moderate">
+                    <a class="font-semibold whitespace-no-wrap text-gray-600 hover:text-blue-800" href="/sortides_afer">
+                        <span class="firstlevel">Sortides</span>
+                    </a>
+                    <ul class="absolute left-0 top-0 mt-10 p-2 rounded-lg shadow-lg bg-white z-10 hidden group-hover:block">
+                        <svg class="block fill-current text-white w-4 h-4 absolute left-0 top-0 ml-3 -mt-3 z-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path></svg>
+                        <li class="p-1 whitespace-no-wrap rounded-full text-sm md:text-base text-gray-600 hover:text-gray-800 hover:bg-gray-100">
+                        <a class="px-2 py-1" href="/sortides_afer">
+                        <span class="">A fer</span>
+                        </a>
+                        </li>
+                        <li class="p-1 whitespace-no-wrap rounded-full text-sm md:text-base text-gray-600 hover:text-gray-800 hover:bg-gray-100">
+                        <a class="px-2 py-1" href="/sortides_fetes">
+                        <span class="">Fetes</span>
+                        </a>
+                        </li>
+                        <li class="p-1 whitespace-no-wrap rounded-full text-sm md:text-base text-gray-600 hover:text-gray-800 hover:bg-gray-100">
+                        <a class="px-2 py-1" href="/sortides">
+                        <span class="">Totes</span>
+                        </a>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li class="relative mx-1 px-1 py-2 group mb-1 md:mb-0" id="button_moderate">
+                    <a class="font-semibold whitespace-no-wrap text-gray-600 hover:text-blue-800" href="/">
+                        <span class="firstlevel">Seccions</span>
+                    </a>
+                    <ul class="absolute left-0 top-0 mt-10 p-2 rounded-lg shadow-lg bg-white z-10 hidden group-hover:block">
+                        <svg class="block fill-current text-white w-4 h-4 absolute left-0 top-0 ml-3 -mt-3 z-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path></svg>
+                        <li class="p-1 whitespace-no-wrap rounded-full text-sm md:text-base text-gray-600 hover:text-gray-800 hover:bg-gray-100">
+                        <a class="px-2 py-1" href="/posts">
+                        <span class="">BLOC</span>
+                        </a>
+                        </li>
+                        <li class="p-1 whitespace-no-wrap rounded-full text-sm md:text-base text-gray-600 hover:text-gray-800 hover:bg-gray-100">
+                        <a class="px-2 py-1" href="/forums">
+                        <span class="">FORUM</span>
+                        </a>
+                        </li>
+                        <li class="p-1 whitespace-no-wrap rounded-full text-sm md:text-base text-gray-600 hover:text-gray-800 hover:bg-gray-100">
+                          <a class="px-2 py-1" href="/LaBotiga">
+                            <span class="">La Botiga</span>
+                          </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="relative mx-1 px-1 py-2 group mb-1 md:mb-0">
+                    <a class="font-semibold whitespace-no-wrap text-teal-600 hover:text-teal-800" href="/nosaltres">
+                        <span class="">Nosaltres</span>
+                    </a>
+                    <ul class="absolute left-0 top-0 mt-10 p-2 rounded-lg shadow-lg bg-white z-10 hidden group-hover:block">
+                        <svg class="block fill-current text-white w-4 h-4 absolute left-0 top-0 ml-3 -mt-3 z-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path></svg>
+                        <li class="p-1 whitespace-no-wrap rounded-full text-sm md:text-base text-gray-600 hover:text-gray-800 hover:bg-gray-100">
+                            <a class="px-2 py-1" href="/ElClub">
+                                <span class="">El Club</span>
+                            </a>
+                        </li>
+                        <li class="p-1 whitespace-no-wrap rounded-full text-sm md:text-base text-gray-600 hover:text-gray-800 hover:bg-gray-100">
+                            <a class="px-2 py-1" href="/plans">
+                                <span class="">Els plans</span>
+                            </a>
+                        </li>
+                        <li class="p-1 whitespace-no-wrap rounded-full text-sm md:text-base text-gray-600 hover:text-gray-800 hover:bg-gray-100">
+                            <a class="px-2 py-1" href="/donations">
+                                <span class="">Donacions</span>
+                            </a>
+                        </li>
+                        <li class="p-1 whitespace-no-wrap rounded-full text-sm md:text-base text-gray-600 hover:text-gray-800 hover:bg-gray-100">
+                          <a class="px-2 py-1" href="/contacte">
+                            <span class="">Contacte</span>
+                          </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="relative mx-1 px-1 py-2 group mb-1 md:mb-0">
+                    <span class="text-redlogo text-sm">Motorista <%#= user_cat %>
+      <% if user_signed_in? %><b><i><%= current_user.nom %></i></b></span>
+                    <ul class="absolute left-0 top-0 mt-10 p-2 rounded-lg shadow-lg bg-white z-10 hidden group-hover:block">
+                    <svg class="block fill-current text-white w-4 h-4 absolute left-0 top-0 ml-3 -mt-3 z-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path></svg>
+                        <li class="p-1 whitespace-no-wrap rounded-full text-sm md:text-base text-gray-600 hover:text-gray-800 hover:bg-gray-100">
+<%#= link_to 'Perfil', user_path(current_user), class:'px-2 py-1' %></li>
+                        <li class="p-1 whitespace-no-wrap rounded-full text-sm md:text-base text-gray-600 hover:text-gray-800 hover:bg-gray-100">
+<%= link_to 'Compte', edit_user_registration_path, class:'px-2 py-1' %></li>
+                        <li class="p-1 whitespace-no-wrap rounded-full text-sm md:text-base text-gray-600 hover:text-gray-800 hover:bg-gray-100">
+<%#= link_to 'Surt', destroy_user_session_path, method: :delete, class:'px-2 py-1'%>
+<%#= link_to 'Surt', '/logout', method: :delete, class:'px-2 py-1'%>
+<%= link_to 'Surt', '/signout', class:'px-2 py-1'%>
+
+<%# if params[:id] = "sign_out" 
+	sign_out current_user 
+	end %>
+<%  #sign_out(current_user)
+    #current_user.deactivate_user(@user)
+    #redirect_to root_path
+    #return
+    #end
+ %> 	
+
+</li>
+      <% else %>
+                    <ul class="absolute left-0 top-0 mt-10 p-2 rounded-lg shadow-lg bg-white z-10 hidden group-hover:block">
+                    <svg class="block fill-current text-white w-4 h-4 absolute left-0 top-0 ml-3 -mt-3 z-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path></svg>
+                         <li class="p-1 whitespace-no-wrap rounded-full text-sm md:text-base text-gray-600 hover:text-gray-800 hover:bg-gray-100">
+<%= link_to 'Entrada', new_user_session_path, class: 'px-2 py-1' %></li>
+                         <li class="p-1 whitespace-no-wrap rounded-full text-sm md:text-base text-gray-600 hover:text-gray-800 hover:bg-gray-100">
+<%= link_to 'Rergistre', new_user_registration_path, class: 'px-2 py-1' %></li>
+      <% end %>
+
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+</header>
+
+
+

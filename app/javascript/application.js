@@ -3,6 +3,9 @@ import "@hotwired/turbo-rails";
 import "controllers";
 import 'flowbite';
 import "flowbite/dist/flowbite.turbo.js";
-import 'flowbite';
 import 'flowbite-datepicker';
 import 'flowbite/dist/datepicker.turbo.js';
+
+//= require_tree .
+
+
